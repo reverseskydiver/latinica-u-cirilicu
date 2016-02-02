@@ -4,12 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Latinica <-> Ћирилица</title>
+  <meta content="Jednostavno konvertovanje teksta iz latinice u ćirilicu i iz ćirilice u latinicu." name="description">
+  <title>Latinica u ćirilicu konverter || Ћирилица у латиницу конвертер</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <style>
     .full-width {
       width: 100%
+    }
+    .reset-btn {
+      margin-top: 2px;
+    }
+    .x {
+      top: 3px;
     }
   </style>
   <!--[if lt IE 9]>
@@ -19,20 +26,18 @@
   </head>
   <body>
     <main class="container-fluid">
-      <div class="row">
+      <header class="row">
         <div class="col-xs-12">
           <h1>Latinica u ćirilicu || Ћирилица у латиницу</h1>
         </div>
-      </div>
-      <div class="row">
+      </header>
+      <article class="row">
         <div class="col-xs-6">
           <textarea id="latinica" class="full-width" rows="10" cols="50" placeholder="Latinica"></textarea>
         </div>
         <div class="col-xs-6">
           <textarea id="cirilica" class="full-width" rows="10" cols="50" placeholder="Ћирилица"></textarea>
         </div>
-      </div>
-      <div class="row">
         <div class="col-xs-6">
           <button type="button" class="btn btn-primary btn-lg btn-block" onClick="convert(true);">
             Ž <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Ж
@@ -43,7 +48,22 @@
             Ž <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Ж
           </button>
         </div>
-      </div>
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-danger btn-lg btn-block reset-btn" onClick="reset();">
+            <span class="glyphicon glyphicon-remove x" aria-hidden="true"></span>
+          </button>
+        </div>
+      </article>
+      <footer class="row">
+        <div class="col-xs-12">
+          <h2>Uputstvo za upotrebu:</h2>
+          <p>
+            Unesite tekst u levo (latinica) ili desno (ćirilica) polje za unos i klikom na plavo dugme izvršite konverziju.
+          </p>
+          <p>Klikom na crveno dugme obrišite oba polja.</p>
+          <iframe src="https://ghbtns.com/github-btn.html?user=torwori&repo=latinica-u-cirilicu&type=fork&count=false&size=large" frameborder="0" scrolling="0" width="79px" height="30px"></iframe>
+        </div>
+      </footer>
     </main>
     <script src="script.js"></script>
   </body>

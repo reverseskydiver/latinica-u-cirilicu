@@ -1,3 +1,8 @@
+function reset() {
+  document.getElementById("latinica").value = "";
+  document.getElementById("cirilica").value = "";
+}
+
 function convert(lat) {
   var map = [
     ["lj", "љ"],
@@ -45,10 +50,10 @@ function convert(lat) {
 
   for (var i = 0; i < map.length; i++) {
     regex = new RegExp(map[i][toBeReplaced], "gm");
-    text = text.replace(regex, map[i][replacer]); 
+    text = text.replace(regex, map[i][replacer]);
 
     regex = new RegExp(map[i][toBeReplaced].toLocaleUpperCase(), "gm");
-    text = text.replace(regex, map[i][replacer].toLocaleUpperCase()); 
+    text = text.replace(regex, map[i][replacer].toLocaleUpperCase());
   }
 
   document.getElementById(outputid).value = text;

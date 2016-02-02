@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Latinica <-> Ћирилица</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style>
+    .full-width {
+      width: 100%
+    }
+  </style>
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  </head>
+  <body>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6">
+          <textarea id="latinica" class="full-width" rows="10" cols="50" placeholder="Latinica"></textarea>
+        </div>
+        <div class="col-xs-6">
+          <textarea id="cirilica" class="full-width" rows="10" cols="50" placeholder="Ћирилица"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <button type="button" class="btn btn-primary btn-lg btn-block" onClick="convert(true);">
+            Ž <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Ж
+          </button>
+        </div>
+        <div class="col-xs-6">
+          <button type="button" class="btn btn-primary btn-lg btn-block" onClick="convert(false);">
+            Ž <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Ж
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

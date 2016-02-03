@@ -4,13 +4,15 @@ function reset() {
 }
 
 function convert(lat) {
-  var map = [
+  var digraphs = [
     ["lj", "љ"],
     ["nj", "њ"],
     ["dž", "џ"],
     ["Lj", "Љ"],
     ["Nj", "Њ"],
-    ["Dž", "Џ"],
+    ["Dž", "Џ"]
+  ];
+  var map = [
     ["a", "а"],
     ["b", "б"],
     ["v", "в"],
@@ -47,6 +49,11 @@ function convert(lat) {
   var text = document.getElementById(inputid).value;
 
   var regex;
+
+  for (var i = 0; i < digraphs.length; i++) {
+    regex = new RegExp(digraphs[i][toBeReplaced], "gm");
+    text = text.replace(regex, digraphs[i][replacer]);
+  }
 
   for (var i = 0; i < map.length; i++) {
     regex = new RegExp(map[i][toBeReplaced], "gm");
